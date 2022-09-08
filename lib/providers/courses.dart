@@ -5,9 +5,9 @@ import '../models/course.dart';
 
 class Courses with ChangeNotifier {
   List<Course> _courses = [
-    Course(code: 'GEG 114', unit: 2, grade: 'C'),
-    Course(code: 'GEG 112', unit: 3, grade: 'A'),
-    Course(code: 'GEG 122', unit: 1, grade: 'B')
+    // Course(code: 'GEG 114', unit: 2, grade: 'C'),
+    // Course(code: 'GEG 112', unit: 3, grade: 'A'),
+    // Course(code: 'GEG 122', unit: 1, grade: 'B')
   ];
   int _deletedIndex = 0;
   Course _deletedCourse = Course(code: '', unit: 0, grade: '');
