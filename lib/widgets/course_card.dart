@@ -12,7 +12,6 @@ class CourseCard extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return Dismissible(
@@ -49,15 +48,6 @@ class CourseCard extends StatelessWidget {
       direction: DismissDirection.endToStart,
       onDismissed: (direction) {
         context.read<Courses>().deleteCourse(course);
-        // ScaffoldMessenger.of(parentContext).showSnackBar(SnackBar(
-        //   content: Text('${course.code} deleted'),
-        //   action: SnackBarAction(
-        //     label: 'Undo',
-        //     onPressed: () {
-        //       context.read<Courses>().undoDelete();
-        //     },
-        //   ),
-        // ));
       },
       key: Key(course.code),
       background: Container(
@@ -85,7 +75,7 @@ class CourseCard extends StatelessWidget {
               style: TextStyle(fontSize: 18),
             ),
             title: course.unit == 1
-                ? Text('${course.unit} Units')
+                ? Text('${course.unit} Unit')
                 : Text('${course.unit} Units'),
             subtitle: course.title == null ? Text('') : Text(course.title!),
             trailing: Text('${course.grade} (${course.gpa})'),
